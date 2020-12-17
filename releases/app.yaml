@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: keyvault-driver-csi
-  namespace: operations-k8s
+  namespace: gitops-azurearc
 spec:
   releaseName: keyvault-driver-csi
   chart:
