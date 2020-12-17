@@ -1,13 +1,12 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: azure-arc-sample
-  namespace: arc-k8s-demo
+  name: keyvault-driver-csi
+  namespace: operations-k8s
 spec:
-  releaseName: arc-k8s-demo
+  releaseName: keyvault-driver-csi
   chart:
-    git: https://github.com/Azure/arc-helm-demo
+    git: https://github.com/Azure/secrets-store-csi-driver-provider-azure
     ref: master
-    path: charts/azure-arc-sample
+    path: charts/csi-secrets-store-provider-azure-0.0.15.tgz
   values:
-    serviceName: arc-k8s-demo
